@@ -1,0 +1,584 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+
+:root {
+  --navy: #172741;
+  --pink: #f2cdff;
+  --green: #97cfd0;
+  --blue: #c4ddfd;
+  --midnight: rgb(44, 63, 101);
+}
+
+html,
+body {
+  color: var(--navy);
+  margin: 0px;
+  max-width: 100%;
+  overflow-x: hidden;
+  transition: background-color 0.8s ease;
+}
+
+h1 {
+  font-family: "Roboto Mono";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Inter";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 0px;
+}
+
+h3 {
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 20px;
+  margin: 6px 0px 0px 0px;
+}
+
+h4 {
+  font-family: "Roboto Mono";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.card-body {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+}
+
+p,
+li {
+  font-family: "Inter";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+
+
+/* ================================================================================== */
+/*                                       NAV                                          */
+/* ================================================================================== */
+
+.knot-logo {
+  width: 58px;
+  height: 58px;
+}
+
+nav {
+  padding: 56px;
+  padding-top: 46px;
+  padding-bottom: 0px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-options * {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  color: inherit;
+  line-height: 24px;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-underline {
+  border-bottom: 2px solid;
+}
+.nav-options a {
+  transition: 0.5s ease-out;
+}
+.nav-options a:hover {
+  transform: translate(0px, -2px);
+}
+
+.nav-options * {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  color: inherit;
+  line-height: 24px;
+}
+
+.rotate {
+  animation: rotation 2.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+/* ================================================================================== */
+/*                                       INDEX                                        */
+/* ================================================================================== */
+
+.about-section {
+  margin: 56px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-col2 img {
+  width: 350px;
+  margin-left: 24px;
+  transition: transform 0.7s ease-in-out;
+}
+
+.about-col2 img:hover {
+  transform: rotate(3deg);
+}
+
+.currently-container {
+  margin-top: 50px;
+}
+
+#currently-img {
+  width: 100%;
+  margin-top: 24px;
+}
+
+
+.color-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.color-block {
+  width: 74px;
+  height: 68px;
+}
+
+.currently-imgs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+}
+
+.currently-stickers {
+  position: absolute;
+}
+
+*[class^="currentlyimg-"] {
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+}
+
+.currently-1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.currentlyimg-1 * {
+  width: 150px;
+}
+
+.currentlyimg-1 .currently-stickers {
+  bottom: 0px;
+  left: 5px;
+  width: 135px;
+}
+
+.currentlyimg-2 * {
+  width: 120px;
+}
+
+.currentlyimg-2 .currently-stickers {
+  bottom: -10px;
+  left: -30px;
+  width: 135px;
+}
+
+.currentlyimg-3 * {
+  width: 160px;
+}
+
+.currentlyimg-3 .currently-stickers {
+  bottom: -40px;
+  left: 20px;
+  width: 135px;
+}
+
+.currentlyimg-4 * {
+  width: 140px;
+}
+
+.currentlyimg-4 .currently-stickers {
+  bottom: -8px;
+  left: -20px;
+  width: 135px;
+}
+
+*[class^="currentlyimg-"]:hover {
+  transform: rotate(6deg);
+}
+
+
+/* ================================================================================== */
+/*                                      RESEARCH                                      */
+/* ================================================================================== */
+
+.main-container,
+.research-header,
+.research-main-content {
+  margin: auto;
+  width: 68%;
+  max-width: 1100px;
+}
+
+.introduction-container {
+  width: 100%;
+}
+
+.research-header {
+  height: calc(95vh);
+  display: flex;
+  align-items: center;
+}
+
+.research-container {
+  transform: translateY(-80px);
+}
+
+.research-subheader * {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 27px;
+  text-align: left;
+}
+
+.research-subheader * {
+  margin: 1px;
+}
+
+.research-title * {
+  margin: 4px;
+}
+
+.research-title {
+  margin-bottom: 20px;
+}
+
+.floating-text {
+  font-family: "Inter";
+  font-size: 16px;
+  margin-top: 36px;
+}
+
+.floating {
+  text-transform: uppercase;
+  animation-name: floating;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 6px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navy);
+  color: #ffffff;
+  padding: 28px;
+  height: 150px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  transition: 0.5s ease-out;
+}
+
+.cards:hover {
+  box-shadow: 2px 4px 6px rgb(0 0 0 / 25%);
+  transform: translate(0px, -4px);
+}
+
+.publication-container > div {
+  margin-bottom: 36px;
+}
+
+.publication-container > div:last-child {
+  margin-bottom: 0px;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-row > * {
+  flex-basis: 100%;
+}
+
+.card-row > div:first-child {
+  margin-right: 36px;
+}
+
+.button {
+  display: block;
+  padding: 10px 14px;
+  margin-top: 14px;
+  border-radius: 4px;
+  width: fit-content;
+  text-decoration: none;
+
+  background-color: #fff;
+  color: var(--navy);
+  transition: 0.5s ease-out;
+
+  font-family: "Roboto Mono";
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  box-shadow: rgb(0 0 0 / 20%) 2px 2px 14px;
+}
+
+.button {
+  margin: 0px;
+  font-family: "Roboto Mono";
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+
+
+/* ================================================================================== */
+/*                                      FOOTER                                        */
+/* ================================================================================== */
+
+footer {
+  background-color: var(--navy);
+  color: #fff;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.footer-container {
+  margin: auto;
+  width: 68%;
+  padding: 36px 0px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-text {
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-col2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+  .card-row {
+    flex-direction: column;
+  }
+
+  .card-row > div:first-child {
+    margin-right: 0px;
+    margin-bottom: 36px;
+  }
+
+  /*Selects the first .button element that is
+  placed immediately after .card-content elements*/
+  .card-content + .button {
+    margin-top: 20px;
+  }
+
+  .currently-imgs {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  nav {
+    width: 68%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about-col2 {
+    display: none;
+  }
+}
+
+@media screen and (max-device-width: 680px) {
+  .main-container,
+  .research-header,
+  .research-main-content {
+    width: 90%;
+  }
+  .footer-container {
+    width: 90%;
+  }
+
+  nav {
+    margin: auto;
+    width: 90%;
+    padding: 36px 0px;
+  }
+
+  .introduction-container {
+    margin: 100px 0px;
+  }
+  .research-container {
+    transform: translateY(0px);
+  }
+  .research-header {
+    height: 100%;
+  }
+  .research-title * {
+    font-size: 80px;
+  }
+  .research-header .floating {
+    font-size: 36px;
+  }
+  .research-subheader * {
+    font-size: 36px;
+    line-height: 150%;
+  }
+  .button {
+    font-size: 24px;
+  }
+
+  .card-body {
+    font-size: 26px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 46px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main-container,
+  .research-header,
+  .research-main-content {
+    width: 90%;
+  }
+  .footer-container {
+    width: 90%;
+  }
+  .about-section {
+    margin: 0px;
+  }
+
+  nav {
+    margin: auto;
+    width: 90%;
+    padding: 36px 0px;
+  }
+}

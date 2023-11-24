@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/knot.svg" type="image/x-icon">
+  <title>Home</title>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html"><img class="knot-logo rotate" src="images/knot.svg" alt=""></a>
+    <div class="nav-options">
+      <a style="font-weight: 700;" href="#"><span class="nav-underline">Home</span></a>
+      <a href="research.html">Research</a>
+      <a href="CalvinGeorgeCV.pdf">CV</a>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <section class="about-section">
+      <div class="about-col1">
+        <h2>Hi, I'm Calvin!</h2>
+        <p>I am a current senior (class of 2024) studying Mathematics and Asian Societies, 
+          Cultures, and Languages (ASCL) at Dartmouth College (class of 2024). 
+          I'm particularly interested in <strong>number theory</strong>. 
+          <br /><br />
+          I discovered my passion for mathematics after I took my first calculus class
+          in my freshman fall at Dartmouth. I entered that class as a _____________ 
+          and walked away as a _____________.
+        </p>
+        <h4 class="floating floating-text">&#8595;</h4>
+      </div>
+      <div class="about-col2">
+        <img id="polaroid" src="images/id.jpg" alt="Image of me">
+      </div>
+    </section>
+
+    <section class="currently-container more-info-containers">
+      <h4>In my free time, you can find me:</h4>
+      <div class="currently-imgs">
+        <div class="currentlyimg-1">
+          <img src="images/frog.jpg" alt="">
+          <img class="currently-stickers" src="images/hobby-sticker-1.png" alt="">
+        </div>
+        <div class="currentlyimg-2">
+          <img src="images/frog.jpg" alt="">
+          <img class="currently-stickers" src="images/hobby-sticker-2.png" alt="">
+        </div>
+        <a href="https://cobble.page/" target="_blank">
+          <div class="currentlyimg-3">
+            <img src="images/frog.jpg" alt="">
+            <img class="currently-stickers" src="images/hobby-sticker-3.png" alt="">
+          </div>
+        </a>
+        <div class="currentlyimg-4">
+          <img src="images/frog.jpg" alt="">
+          <img class="currently-stickers" src="images/hobby-sticker-4.png" alt="">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col2">
+        <div class="footer-links">
+          <a href="index.html"><span class="underline">Home</span>&#160;<strong>•</strong>&#160;</a>
+          <a href="research.html"><span class="underline">Research</span>&#160;<strong>•</strong>&#160;</a>
+          <a href="CalvinGeorgeCV.pdf"><span class="underline">CV</span>&#160;<strong>•</strong>&#160;</a>
+          <a href="https://www.linkedin.com/in/calvin-george-49144920b/" target="_blank"><span
+              class="underline">LinkedIn</span></a>
+        </div>
+        <div class="social-links">
+          <a class="footer-text" id="email">calvin.d.george.24@dartmouth.edu</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      gsap.from(".about-section", { duration: 0.6, y: 6 });
+      $(window).resize(function () {
+        var frameWidth = $("#inspect-image").width();
+        $("#design-translate").css("right", (frameWidth / 2) - 83);
+      });
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.more-info-containers').forEach(box => {
+      gsap.fromTo(box, {
+        autoAlpha: 0,
+        y: 50
+      }, {
+        scrollTrigger: {
+          start: "top center",
+          trigger: box,
+          once: true
+        },
+        duration: 1,
+        autoAlpha: 1,
+        y: 0
+      });
+    });
+  </script>
+</body>
+
+</html>
